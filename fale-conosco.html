@@ -1,47 +1,194 @@
-Google Glass
-A revolução do Google está chegando
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css">
 
-[AQUI ENTRA UMA FOTO]
+</head>
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
-
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
-
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
-
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+<script language="javascript" src="_javascript/funcoes.js"> </script>
 
 
-[BOTÃO ENVIAR]
+<body>
 
-Copyright 2013 - by Gustavo Guanabara
-Facebook | Twitter
+    <div id="interface">
+       
+            <header id="cabecalho">
+                <hgroup>
+                    <h1>Google Glass</h1>
+                    <h2>A revolução do Google está chegando</h2>
+                </hgroup>
+                <img id="icone" src="_imagens/glass-oculos-preto-peq.png" alt="Google Glass"> <br>
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                    <ul>
+                        <li onmousemove="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html" target="_self" rel="internal">Home</a></li>
+
+                        <li onmousemove="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html" target="_self" rel="internal">Especificações</a></li>
+
+                        <li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html" target="_self" rel="internal">Fotos</a></li>
+
+                        <li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html" target="_self" rel="internal">Multimídia</a></li>
+
+                        <li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html" target="_self" rel="internal">Fale conosco</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="corpo-full">
+                <article id="noticia-principal">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Fale Conosco > Contato</h3>
+                            <h1>Formulário de Contato</h1>
+                            <h2>por Gustavo Guanabara</h2>
+                            <h3 class="direita">Atualizado em 01/Setembro/2022</h3>
+                        </hgroup>
+                    </header>          
+                
+                    <form id="formulario" method="post" autocomplete="off" >    
+                        <fieldset id="usuario">
+                            <legend>Identificação do Usuário</legend>
+                                <p>
+                                    <label for="inome">Nome:</label>
+                                    <input type="text" name="nome" id="inome" size="50" maxlength="50" placeholder="Seu nome" required>
+                                </p>
+                                <p>
+                                    <label for="isenha">Senha:</label>
+                                    <input type="password" name="senha" id="isenha" maxlength="15" minlength="8" placeholder="8 a 15 caracteres" required>
+                                </p>
+                                <p>
+                                    <label for="iemail">E-mail:</label>
+                                    <input type="email" name="email" id="iemail" size="50" maxlength="100" placeholder="Seu e-mail" required>
+                                </p>
+                                    <fieldset id="sexo">Sexo:
+                                        <p>
+                                            <label for="imas"> Masculino</label>
+                                            <input type="radio" name="sexo" id="imas" checked>
+                                        
+                                            <label for="ifem"> Feminino</label>
+                                            <input type="radio" name="sexo" id="ifem">
+
+                                            <label for="ioutro">Outro</label>
+                                            <input type="radio" name="sexo" id="ioutro">
+                                        </p>
+                                    </fieldset>
+                                <p>
+                                    <label for="inasc">Data de Nascimento:</label>
+                                    <input type="date" name="nascimento" id="nasc" required>
+                                </p>
+                        </fieldset>
+                        
+                        <fieldset id="endereco">
+                            <legend>Endereço do Usuário</legend>
+                                <p>
+                                    <label for="iendereco">Logradouro:</label>
+                                    <input type="text" name="endereco" id="iendereco" size="50" maxlength="120" placeholder="Rua, Av, Trav " required>
+                                </p>
+                                <p>
+                                    <label for="inum">Número:</label>
+                                    <input type="number" name="num" id="inum" placeholder="Número da residência" required>
+                                </p>
+                                <p>
+                                    
+                                    <label for="iest">Estado:</label>
+                                    <select name="estado" id="iest">
+                                        <!-- Região Nordeste -->
+                                        <optgroup label="Região Nordeste">
+                                            <option value="AL">Alagoas</option>
+                                            <option value="BA">Bahia</option>
+                                            <option value="CE" selected>Ceará</option>
+                                            <option value="MA">Maranhão</option>
+                                            <option value="PB">Paraíba</option>
+                                            <option value="PE">Pernambuco</option>
+                                            <option value="PI">Piauí</option>
+                                            <option value="RN">Rio Grande do Norte</option>
+                                            <option value="SE">Sergipe</option>
+                                        </optgroup>
+                                         <!-- Região Sul -->
+                                        <optgroup label="Região Sul">
+                                            <option value="PR">Paraná</option>
+                                            <option value="RS">Rio Grande do Sul</option>
+                                            <option value="SC">Santa Catarina</option>
+                                        </optgroup>                                
+                                         <!-- Região Sudeste -->                             
+                                        <optgroup label="Região Sudeste">
+                                            <option value="ES">Espírito Santo</option>
+                                            <option value="MG">Minas Gerais</option>
+                                            <option value="SP">São Paulo</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                        </optgroup>
+                                         <!-- Região Centro-Oeste -->                         
+                                        <optgroup label="Região Centro-Oeste">
+                                            <option value="GO">Goiás</option>
+                                            <option value="MT">Mato Grosso </option>
+                                            <option value="MS">Mato Grosso do Sul</option>
+                                        </optgroup>                              
+                                         <!-- Região Norte -->
+                                        <optgroup label="Região Sul">
+                                            <option value="AC">Acre</option>
+                                            <option value="AP">Amapá</option>
+                                            <option value="AM">Amazonas</option>
+                                            <option value="PA">Pará</option>
+                                            <option value="RO">Rondônia</option>
+                                            <option value="RR">Roraima</option>
+                                            <option value="TO">Tocantins</option>             
+                                        </optgroup>
+                                    </select>
+                                </p>
+                                <p>
+                                    <label for="icid">Cidade:</label>
+                                    <input type="text" name="cid" id="icid" placeholder="Sua cidade" required>
+                                </p>
+                        </fieldset>
+                        
+                        <fieldset id="mensagem">
+                            <legend>Mensagem do Usuário</legend>
+                                <p>
+                                    <label for="iurg">Grau de Urgência:</label>
+                                    <input type="range" name="urgencia" id="iurg" min="0" max="10" value="5" oninput="ival.innerHTML = Number(iurg.value)">
+                                    <output id="ival">5</output>
+                                </p>
+                                <p>
+                                    <label for="imens">Mensagem:</label>
+                                    <textarea name="mens" id="imens" cols="30" rows="5" placeholder="Sua mensagem..."></textarea>
+                                </p>
+                        </fieldset>
+                        
+                        <fieldset id="queroum">
+                            <legend>Quero um Google Glass</legend>
+                                <p>Gostaria de adquirir um Google Glass quando disponível</p>
+                                <p>
+                                    <label for="icor">Cor:</label>
+                                    <input type="color" name="cor" id="icor">
+                                </p>
+                                <p>
+                                    <label for="iqtd">Quantidade:</label>
+                                    <input type="number" name="qtd" id="iqtd">
+                                </p>
+                                <p>
+                                    <label for="ivalor">Preço Total: R$</label>
+                                    
+                                </p>
+                        </fieldset>                
+                    <input id="botao" type="submit" value="ENVIAR">
+                    </form>
+                </article>
+            </section>
+
+
+            <footer id="rodape">
+                <p>
+                    Copyright &copy; 2013 - by Gustavo Guanabara <br>
+                    <a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" target="_blank">YouTube</a> | <a href="https://www.instagram.com/cursoemvideo/" target="_blank">Instagram</a>
+                </p>
+            </footer>
+</div>
+
+</body>
+</html>
+
