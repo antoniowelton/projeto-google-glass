@@ -10,26 +10,23 @@
 
 </head>
 <style>
-    div.video01 {
-        background-color: white;
-        position: relative;
-        padding: 1px;
-        padding: 170px
-    }
+   
     #iframe1 {
         width: 500px;
         height: 280px;
-    }
-    div.video01 > iframe {        
-        position: absolute;
-        top: 5%;
-        left: 5%;
-    }
-
+        margin-left: 23px;
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }   
+    
     #iframe2 {
         width: 300px;
         height: 170px;
     }
+
+
+
+
 </style>
 
 <script language="javascript" src="_javascript/funcoes.js"> </script>
@@ -140,11 +137,9 @@
                 <p>O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-<wbr/>humano”, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
             
                 
-                    <div class="video01">
-                        <iframe id="iframe1" src="_media/getting-started.mp4" control="controls" autoplay="no" frameborder="0"> 
-                                                      
-                        </iframe>
-                    </div>
+                    
+                <iframe id="iframe1" src="_media/one-day.mp4" control="controls" autoplay="no" frameborder="1">                                   
+                </iframe>          
                 
 
             </article>
@@ -156,19 +151,10 @@
             <h2>Vídeo mais recente</h2>
         
             
-                <div class="video02">
-                    <iframe id="iframe2" src="_media/one-day.mp4" frameborder="0">
-
-                        <video  controls="controls" poster="_imagens/video-mini02.jpg">
-                            <source src="_media/how-it-feels.mp4" type="video/mp4">
-                            <source src="_media/how-it-feels.webmsd.webm" type="video/webm">
-                            <source src="_media/how-it-feels.oggtheora.ogv" type="video/ogg">
-                            <p>Seu navegador não pode reproduzir esse vídeo. <a href="_media/how-it-feels.mp4" download="_media/how-it-feels.mp4" type="video/mp4">Fazer download.</a>
-                            </p>
-                        </video>
-                    </iframe>
-                </div>
-            
+               
+                <iframe id="iframe2" src="_media/how-it-feels.mp4" frameborder="0">
+                </iframe>
+                            
         
             <h2>Novidades no Glass</h2>
             <p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante.</p>
