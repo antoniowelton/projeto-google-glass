@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'FonteLogo';
-    src: url(../_fonts/bubblegum-sans-regular.otf) format('opentype');
+    src: url(../fonts/bubblegum-sans-regular.otf) format('opentype');
 }
 
 body {
@@ -112,7 +112,7 @@ header#cabecalho  img#icone {
 header#cabecalho {
     border-bottom: 1px solid #606060;
     height: 170px; 
-    background-image: url(../_imagens/glass-logo-peq.jpg);
+    background-image: url(../imagens/glass-logo-peq.jpg);
     background-position: left bottom;
     background-repeat: no-repeat;    
 }
