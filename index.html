@@ -9,6 +9,28 @@
     <link rel="shortcut icon" href="_imagens/favicon.ico" type="image/x-icon">
 
 </head>
+<style>
+    div.video01 {
+        background-color: white;
+        position: relative;
+        padding: 1px;
+        padding: 170px
+    }
+    #iframe1 {
+        width: 500px;
+        height: 280px;
+    }
+    div.video01 > iframe {        
+        position: absolute;
+        top: 5%;
+        left: 5%;
+    }
+
+    #iframe2 {
+        width: 300px;
+        height: 170px;
+    }
+</style>
 
 <script language="javascript" src="_javascript/funcoes.js"> </script>
 
@@ -118,13 +140,11 @@
                 <p>O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-<wbr/>humano”, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
             
                 
-                    <video  controls="controls" poster="_imagens/video-mini01.jpg">
-                        <source src="_media/one-day.mp4" type="video/mp4">
-                        <source src="_media/one-day.webmsd.webm" type="video/webm">
-                        <source src="_media/one-day.oggtheora.ogv" type="video/ogg">
-                        <p>Seu navegador não pode reproduzir esse vídeo. <a href="_media/one-day.mp4" download="_media/one-day.mp4" type="video/mp4">Fazer download.</a>
-                        </p>
-                    </video>
+                    <div class="video01">
+                        <iframe id="iframe1" src="_media/getting-started.mp4" control="controls" autoplay="no" frameborder="0"> 
+                                                      
+                        </iframe>
+                    </div>
                 
 
             </article>
@@ -136,13 +156,18 @@
             <h2>Vídeo mais recente</h2>
         
             
-                <video  controls="controls" poster="_imagens/video-mini02.jpg">
-                    <source src="_media/how-it-feels.mp4" type="video/mp4">
-                    <source src="_media/how-it-feels.webmsd.webm" type="video/webm">
-                    <source src="_media/how-it-feels.oggtheora.ogv" type="video/ogg">
-                    <p>Seu navegador não pode reproduzir esse vídeo. <a href="_media/how-it-feels.mp4" download="_media/how-it-feels.mp4" type="video/mp4">Fazer download.</a>
-                    </p>
-                </video>
+                <div class="video02">
+                    <iframe id="iframe2" src="_media/one-day.mp4" frameborder="0">
+
+                        <video  controls="controls" poster="_imagens/video-mini02.jpg">
+                            <source src="_media/how-it-feels.mp4" type="video/mp4">
+                            <source src="_media/how-it-feels.webmsd.webm" type="video/webm">
+                            <source src="_media/how-it-feels.oggtheora.ogv" type="video/ogg">
+                            <p>Seu navegador não pode reproduzir esse vídeo. <a href="_media/how-it-feels.mp4" download="_media/how-it-feels.mp4" type="video/mp4">Fazer download.</a>
+                            </p>
+                        </video>
+                    </iframe>
+                </div>
             
         
             <h2>Novidades no Glass</h2>

@@ -261,9 +261,10 @@ aside#lateral h2 {
     color: white;
 }
 
+
 footer#rodape {
     clear: both; 
-    border-top: 1px solid rgba(0, 0, 0, 0.523);   
+    border-top: 1px solid rgba(0, 0, 0, 0.523);     
 }
 
 footer#rodape p {
