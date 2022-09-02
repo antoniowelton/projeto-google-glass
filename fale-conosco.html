@@ -9,15 +9,21 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
 
+    <script language="javascript" src="javascript/funcoes.js"> </script>
+    <script>
+        function cal_total(){
+            var qtd = parseInt(document.getElementById('iqtd').value);
+            tot = qtd * 1500;
+            document.getElementById('itot').value = tot;
+        }
+    </script>
 </head>
 
-<script language="javascript" src="javascript/funcoes.js"> </script>
+
 
 
 <body>
-
-    <div id="interface">
-       
+    <div id="interface">       
             <header id="cabecalho">
                 <hgroup>
                     <h1>Google Glass</h1>
@@ -51,7 +57,7 @@
                         </hgroup>
                     </header>          
                 
-                    <form id="formulario" method="post" autocomplete="off" >    
+                    <form id="formulario" method="post" autocomplete="off" oninput="cal_total();">    
                         <fieldset id="usuario">
                             <legend>Identificação do Usuário</legend>
                                 <p>
@@ -88,7 +94,7 @@
                             <legend>Endereço do Usuário</legend>
                                 <p>
                                     <label for="iendereco">Logradouro:</label>
-                                    <input type="text" name="endereco" id="iendereco" size="50" maxlength="120" placeholder="Rua, Av, Trav " required>
+                                    <input type="text" name="endereco" id="iendereco" size="42" maxlength="120" placeholder="Rua, Av, Trav " required>
                                 </p>
                                 <p>
                                     <label for="inum">Número:</label>
@@ -160,23 +166,27 @@
                                 </p>
                         </fieldset>
                         
-                        <fieldset id="queroum">
+                        <fieldset id="pedido">
                             <legend>Quero um Google Glass</legend>
-                                <p>Gostaria de adquirir um Google Glass quando disponível</p>
+                                <p>
+                                    <label for="iped">Gostaria de adquirir um Google Glass quando disponível</label>
+                                    <input type="checkbox" name="ped" id="iped" checked>
+                                </p>
                                 <p>
                                     <label for="icor">Cor:</label>
-                                    <input type="color" name="cor" id="icor">
+                                    <input type="color" name="cor" id="icor" value="#07f435">
                                 </p>
                                 <p>
                                     <label for="iqtd">Quantidade:</label>
-                                    <input type="number" name="qtd" id="iqtd">
+                                    <input type="number" name="qtd" id="iqtd" min="0" max="6" value="0">
                                 </p>
                                 <p>
-                                    <label for="ivalor">Preço Total: R$</label>
-                                    
+                                    <label for="itot">Preço Total: R$</label>
+                                    <input type="text" name="tot" id="itot" placeholder="Total a pagar" readonly>                      
                                 </p>
                         </fieldset>                
-                    <input id="botao" type="submit" value="ENVIAR">
+                    <!--    <input id="botao" type="submit" value="ENVIAR">  -->
+                    <input id="botaoenviar" type="image" src="imagens/botao-enviar.png">
                     </form>
                 </article>
             </section>
